@@ -6,4 +6,6 @@ root: docs/introductie
 chapters:
 - file: docs/dataset
 - file: docs/perspectieven
+- file: docs/appendix
+
 
