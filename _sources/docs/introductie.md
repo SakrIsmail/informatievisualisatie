@@ -1,12 +1,13 @@
 # Introductie
 
-We kijken in dit project naar de relatie tussen energiegebruik per land en de gezondheid van de inwoners. Aan de ene kant zijn er CO2-uitstoot, opgewekte energie en de verdeling duurzame bronnen gebruikt voor het opwekken hiervan.
-Dit vergelijken we met data van de andere kant, zoals levensverwachting, alcoholconsumptie en toegang tot schoon water.
+Student names: Elliot Callenbach, Nordin El Assassi, Simen Veenman, Sakr Ismail
 
-Standpunten:
-1. Mensen in landen met een hogere CO2-uitstoot per inwoner zijn gezonder.
+Team number: K4
 
-2. Mensen in landen die een groter deel van hun elektriciteit duurzaam opwekken zijn gezonder.
+
+Er ligt in de laatste jaren veel focus op overheden om te verduurzamen en CO2-uitstoot te verminderen. Landen die veel vervuilen worden bekritiseerd en landen die verduurzamen worden aangemoedigd. Wij vroegen ons af of de inzet van landen op dit gebied samenhangt met de gezondheid van de inwoners. We hebben twee datasets gevonden die hier nuttige informatie over bevatten. Uit deze datasets hebben we onze twee verschillende standpunten afgeleid. Aan de ene kant vonden we dat mensen in landen met een hogere CO2-uitstoot per inwoner gezonder zijn. Aan de andere kant vonden we dat mensen in Europese landen die een groter deel van hun elektriciteit duurzaam opwekken gezonder zijn.
+
+
 
 
 
