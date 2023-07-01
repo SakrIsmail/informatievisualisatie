@@ -1,6 +1,5 @@
-# Introductie
-
-Student names: Elliot Callenbach, Nordin El Assassi, Simen Veenman, Sakr Ismail
+### De Gezondheidseffecten van CO2-Uitstoot en Duurzame Energie<br><sup>Een Verkenning van de Relatie met Inwoners</sup>
+Student names: Elliott Callenbach, Nordin El Assassi, Simen Veenman, Sakr Ismail
 
 Team number: K4
 

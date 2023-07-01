@@ -1,9 +1,10 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: InfoVis Project # Change this to your book title.
+title: De Gezondheidseffecten van CO2-Uitstoot en Duurzame Energie # Change this to your book title.
 author: Elliott, Nordin, Simen, Sakr # Change this to your name (or your team/organization name).
 
+copyright: 2023
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
