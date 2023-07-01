@@ -1,0 +1,111 @@
+Traceback (most recent call last):
+  File "/home/sakr/.local/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1265, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 703, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1021, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 915, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Filter the 'df_c' DataFrame for rows with 'region' value as 'Europe'
+df_continent= df[df['region'] == 'Europe']
+
+# Filter the 'df_l' DataFrame for rows with country codes present in 'df_c_europe'
+df_continent = df[df['country_code'].isin(df_continent['country_code'])]
+
+fig = px.scatter(
+    df_continent,
+    x=df_continent['renewable'],
+    y=df_continent['basic_water'],
+    trendline='ols',
+    trendline_color_override="red",
+    size=abs(np.log10(df_continent['total_electricity']*10)),
+    hover_data={
+        'Hernieuwbare elektriciteit': filtered_x,
+        'Toegang tot schoon water': filtered_y,
+        'Country': df_continent['country'][df_continent['total_electricity'] >= 0]
+    },
+)
+
+# Define custom hovertemplate
+hover_template = '<b>Country</b>: %{customdata[2]}<br>' \
+                 '<b>Hernieuwbare elektriciteit</b>: %{customdata[0]:.2f}<br>' \
+                 '<b>Toegang tot schoon water</b>: %{customdata[1]:.2f}<br>' \
+                 '<extra></extra>'
+
+# Update hovertemplate for the scatter trace
+fig.update_traces(hovertemplate=hover_template)
+
+
+# Add a legend entry
+legend_trace = go.Scatter(
+    x=[None],
+    y=[None],
+    mode='markers',
+    marker=dict(
+        size=10,
+        sizemode='diameter',
+        color='blue'
+    ),
+    name='Totale gegenereerde elektriciteit (TWh)',        
+    showlegend=True
+)
+
+
+
+fig.add_trace(legend_trace)
+
+# Customize the chart layout
+fig.update_layout(
+    title='Hernieuwbaar elektriciteit en toegang tot schoon drinkwater (Europa)',
+    xaxis_title='Hernieuwbare elektriciteit (%)',
+    yaxis_title='Toegang tot schoon drinkwater (%)',
+    width=780,
+    legend=dict(
+        itemsizing='constant',  # Make the legend items static
+        itemclick=False, # Disable interactivity of the legend item
+        tracegroupgap=10,  # Increase the gap between legend groups
+        x=0,  # Set the x-coordinate of the legend
+        y=-0.2,  # Set the y-coordinate of the legend
+    ),
+)
+
+# Show the chart
+fig.show()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[5], line 15[0m
+[1;32m      4[0m [38;5;66;03m# Filter the 'df_l' DataFrame for rows with country codes present in 'df_c_europe'[39;00m
+[1;32m      5[0m df_continent [38;5;241m=[39m df[df[[38;5;124m'[39m[38;5;124mcountry_code[39m[38;5;124m'[39m][38;5;241m.[39misin(df_continent[[38;5;124m'[39m[38;5;124mcountry_code[39m[38;5;124m'[39m])]
+[1;32m      7[0m fig [38;5;241m=[39m px[38;5;241m.[39mscatter(
+[1;32m      8[0m     df_continent,
+[1;32m      9[0m     x[38;5;241m=[39mdf_continent[[38;5;124m'[39m[38;5;124mrenewable[39m[38;5;124m'[39m],
+[1;32m     10[0m     y[38;5;241m=[39mdf_continent[[38;5;124m'[39m[38;5;124mbasic_water[39m[38;5;124m'[39m],
+[1;32m     11[0m     trendline[38;5;241m=[39m[38;5;124m'[39m[38;5;124mols[39m[38;5;124m'[39m,
+[1;32m     12[0m     trendline_color_override[38;5;241m=[39m[38;5;124m"[39m[38;5;124mred[39m[38;5;124m"[39m,
+[1;32m     13[0m     size[38;5;241m=[39m[38;5;28mabs[39m(np[38;5;241m.[39mlog10(df_continent[[38;5;124m'[39m[38;5;124mtotal_electricity[39m[38;5;124m'[39m][38;5;241m*[39m[38;5;241m10[39m)),
+[1;32m     14[0m     hover_data[38;5;241m=[39m{
+[0;32m---> 15[0m         [38;5;124m'[39m[38;5;124mHernieuwbare elektriciteit[39m[38;5;124m'[39m: [43mfiltered_x[49m,
+[1;32m     16[0m         [38;5;124m'[39m[38;5;124mToegang tot schoon water[39m[38;5;124m'[39m: filtered_y,
+[1;32m     17[0m         [38;5;124m'[39m[38;5;124mCountry[39m[38;5;124m'[39m: df_continent[[38;5;124m'[39m[38;5;124mcountry[39m[38;5;124m'[39m][df_continent[[38;5;124m'[39m[38;5;124mtotal_electricity[39m[38;5;124m'[39m] [38;5;241m>[39m[38;5;241m=[39m [38;5;241m0[39m]
+[1;32m     18[0m     },
+[1;32m     19[0m )
+[1;32m     21[0m [38;5;66;03m# Define custom hovertemplate[39;00m
+[1;32m     22[0m hover_template [38;5;241m=[39m [38;5;124m'[39m[38;5;124m<b>Country</b>: [39m[38;5;124m%[39m[38;5;132;01m{customdata[2]}[39;00m[38;5;124m<br>[39m[38;5;124m'[39m \
+[1;32m     23[0m                  [38;5;124m'[39m[38;5;124m<b>Hernieuwbare elektriciteit</b>: [39m[38;5;124m%[39m[38;5;132;01m{customdata[0]:.2f}[39;00m[38;5;124m<br>[39m[38;5;124m'[39m \
+[1;32m     24[0m                  [38;5;124m'[39m[38;5;124m<b>Toegang tot schoon water</b>: [39m[38;5;124m%[39m[38;5;132;01m{customdata[1]:.2f}[39;00m[38;5;124m<br>[39m[38;5;124m'[39m \
+[1;32m     25[0m                  [38;5;124m'[39m[38;5;124m<extra></extra>[39m[38;5;124m'[39m
+
+[0;31mNameError[0m: name 'filtered_x' is not defined
+NameError: name 'filtered_x' is not defined
+
