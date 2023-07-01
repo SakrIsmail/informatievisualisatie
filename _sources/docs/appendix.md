@@ -14,3 +14,5 @@ Chat-GPT is voornamelijk gebruikt als een zoekmethode om antwoord te vinden op p
 # Reference
 
 Pezzotti,P. et al (2018). The impact of immunization programs on 10 vaccine preventable diseases in Italy: 1900–2015. Vaccine, 36(11), 1435–1443. [https://doi.org/10.1016/j.vaccine.2018.01.065](https://doi.org/10.1016/j.vaccine.2018.01.065)
+
+Omarjee, L. (2023, maart 20). Load shedding can’t compete with health, human life - environmental groups. Business. [https://www.news24.com/fin24/climate_future/news/load-shedding-cant-compete-with-health-human-life-environmental-groups-20230318](https://www.news24.com/fin24/climate_future/news/load-shedding-cant-compete-with-health-human-life-environmental-groups-20230318)

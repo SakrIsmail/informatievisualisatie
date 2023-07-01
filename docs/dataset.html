@@ -147,7 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="introductie.html">
-                    De Gezondheidseffecten van CO2-Uitstoot en Duurzame Energie<br><sup>Een Verkenning van de Relatie met Inwoners</sup>
+                    <h4>De Gezondheidseffecten van CO2-Uitstoot en Duurzame Energie<br><sup>Een Verkenning van de Relatie met Inwoners</sup></h4>
                 </a>
             </li>
         </ul>
@@ -383,10 +383,10 @@ Bron: <a class="reference external" href="https://www.kaggle.com/datasets/mmatts
 </section>
 <section id="samengevoegde-dataset">
 <h2>Samengevoegde dataset<a class="headerlink" href="#samengevoegde-dataset" title="Permalink to this heading">#</a></h2>
-<p>Om de data in de datasets consistent te maken is ervoor gekozen om te filteren op het jaar 2016, aangezien dit het meest recente jaar is dat in beide datasets aanwezig is. Vervolgens worden kolommen zonder data verwijderd en worden de overige lege cellen veranderd in een waarde van -1. Deze stappen zijn nodig om deze waarden te kunnen herkennen en filteren tijdens de visualisaties van de data. Bovendien zijn er extra variabelen berekend zoals <em>CO2_per_capita</em>, wat de CO2 uitstoot per inwoners is door de CO2 te delen door de populatie. We hebben het vervolgens vermenigvuldigd met 1000 om de CO2 in ton te berekenen. Ook is <em>GDP_per_capita</em> berekend door de GDP te delen door de populatie. Daarnaast is de variabele <em>age5-19healthyweight</em> gecreëerd door het verschil van 100 - age5-19thinness - age5-19obesity te berekenen. Dit geeft een beter inzicht in het percentage van de bevolking met een gezond gewicht. Tenslotte wordt de <em>adult_mortality</em> variabel gedeeld door 10 om een percentage te verkrijgen. We hebben gekozen om the delen door 10 omdat de adult_mortality het aantal doden per 1000 inwoners was en wij vonden het netter om het in percentage weer te geven. Deze vier variabelen zijn aangemaakt omdat deze meer betekenisvol zijn bij het vergelijken van landen. Hierbij is rekening gehouden met ontbrekende waarden, zodat er geen berekeningen plaatsvinden met waarden van -1. Ten slotte worden de datasets samengevoegd met behulp van de inner join methode op de variabel country_code (Figuur 1), omdat deze consistent is in beide datasets.</p>
+<p>Om de data in de datasets consistent te maken is ervoor gekozen om te filteren op het jaar 2016, aangezien dit het meest recente jaar is dat in beide datasets aanwezig is. Vervolgens worden kolommen zonder data verwijderd en worden de overige lege cellen veranderd in een waarde van -1. Deze stappen zijn nodig om deze waarden te kunnen herkennen en filteren tijdens de visualisaties van de data. Bovendien zijn er extra variabelen berekend zoals <em>CO2_per_capita</em>, wat de CO2 uitstoot per inwoners is door de CO2 te delen door de populatie. We hebben het vervolgens vermenigvuldigd met 1000 om de CO2 in ton te berekenen. Ook is <em>GDP_per_capita</em> berekend door de GDP te delen door de populatie. Daarnaast is de variabele <em>age5-19healthyweight</em> gecreëerd door het verschil van 100 - <em>age5-19thinness</em> - <em>age5-19obesity</em> te berekenen. Dit geeft een beter inzicht in het percentage van de bevolking met een gezond gewicht. Tenslotte wordt de <em>adult_mortality</em> variabel gedeeld door 10 om een percentage te verkrijgen. We hebben gekozen om the delen door 10 omdat de <em>adult_mortality</em> het aantal doden per 1000 inwoners was en wij vonden het netter om het in percentage weer te geven. Deze vier variabelen zijn aangemaakt omdat deze meer betekenisvol zijn bij het vergelijken van landen. Hierbij is rekening gehouden met ontbrekende waarden, zodat er geen berekeningen plaatsvinden met waarden van -1. Ten slotte worden de datasets samengevoegd met behulp van de inner join methode op de variabel <em>country_code</em> (Figuur 1), omdat deze consistent is in beide datasets.</p>
 <p><img alt="Head van de samengevoegde dataset" src="../_images/head.png" />
-<em>Figuur 1. De head van de <span class="xref myst">samengevoegde dataset</span>.</em>
-<br></p>
+<em>Figuur 1. De head van de <a class="reference download internal" download="" href="../_downloads/73dc57173be61fd773b6b51d2376075c/merged.csv"><span class="xref download myst">samengevoegde dataset</span></a>.</em></p>
+<p><a class="reference download internal" download="" href="../_downloads/482ce15576bd565f8de9af5b0fcc3fc5/clean.py"><span class="xref download myst">preprocessing bestand</span></a></p>
 <section id="omschrijving-variabelen">
 <h3>Omschrijving Variabelen<a class="headerlink" href="#omschrijving-variabelen" title="Permalink to this heading">#</a></h3>
 <table class="table">
@@ -549,7 +549,7 @@ Bron: <a class="reference external" href="https://www.kaggle.com/datasets/mmatts
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">De Gezondheidseffecten van CO2-Uitstoot en Duurzame Energie<br><sup>Een Verkenning van de Relatie met Inwoners</sup></p>
+        <p class="prev-next-title"><h4>De Gezondheidseffecten van CO2-Uitstoot en Duurzame Energie<br><sup>Een Verkenning van de Relatie met Inwoners</sup></h4></p>
       </div>
     </a>
     <a class="right-next"
